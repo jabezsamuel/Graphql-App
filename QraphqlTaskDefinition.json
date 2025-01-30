@@ -1,0 +1,26 @@
+{ 
+    "family": "graphql-server-task", 
+    "networkMode": "awsvpc", 
+    "executionRoleArn": "arn:aws:iam::296062579831:role/ecsTaskExecutionRole", 
+    "containerDefinitions": [ 
+      { 
+        "name": "graphql-container", 
+        "image": "296062579831.dkr.ecr.ap-south-1.amazonaws.com/graphql-repo:latest", 
+        "memory": 512, 
+        "cpu": 256, 
+        "essential": true, 
+        "portMappings": [ 
+          { 
+            "containerPort": 4000, 
+            "hostPort": 4000, 
+            "protocol": "tcp" 
+          } 
+        ] 
+      } 
+    ], 
+    "requiresCompatibilities": ["FARGATE"], 
+    "cpu": "256", 
+    "memory": "512" 
+  }
+  
+  
