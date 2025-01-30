@@ -1,0 +1,165 @@
+{
+  "D:\\BitCot\\client": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.19",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>",
+      "sls": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "React-Frontend-App",
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs16.x",
+              "region": "ap-south-1",
+              "stage": "dev",
+              "versionFunctions": true
+            },
+            "functions": {
+              "app": {
+                "handler": "app.server",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/",
+                      "method": "ANY",
+                      "cors": true
+                    }
+                  },
+                  {
+                    "http": {
+                      "path": "/{proxy+}",
+                      "method": "ANY",
+                      "cors": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "configFileDirPath": "D:\\BitCot\\client",
+          "config": {
+            "type": "sls"
+          },
+          "options": {
+            "t": [
+              true,
+              true
+            ],
+            "e": [
+              true,
+              "aws-nodejs"
+            ],
+            "m": true,
+            "p": true,
+            "l": true,
+            "a": true,
+            "n": "serverless-nodejs-app"
+          },
+          "stage": "dev",
+          "dashboard": null,
+          "logger": {
+            "namespace": "s:core:resolver:sls",
+            "prefix": null,
+            "prefixColor": null
+          },
+          "_credentialsPromise": "<REDACTED>"
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "D:\\BitCot\\client",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "React-Frontend-App",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs16.x",
+        "region": "ap-south-1",
+        "stage": "dev",
+        "versionFunctions": true
+      },
+      "functions": {
+        "app": {
+          "handler": "app.server",
+          "events": [
+            {
+              "http": {
+                "path": "/",
+                "method": "ANY",
+                "cors": true
+              }
+            },
+            {
+              "http": {
+                "path": "/{proxy+}",
+                "method": "ANY",
+                "cors": true
+              }
+            }
+          ]
+        }
+      }
+    },
+    "serviceRawFile": "service: React-Frontend-App\r\n\r\nprovider: \r\n  name: aws \r\n  runtime: nodejs16.x \r\n  region: ap-south-1 \r\n \r\nfunctions:\r\n  app:\r\n    handler: app.server # reference the file and exported method\r\n    events: # events trigger lambda functions\r\n      - http: # this is an API Gateway HTTP event trigger\r\n          path: /\r\n          method: ANY\r\n          cors: true\r\n      - http: # all routes get proxied to the Express router\r\n          path: /{proxy+}\r\n          method: ANY\r\n          cors: true",
+    "command": [
+      "create"
+    ],
+    "options": {
+      "t": [
+        true,
+        true
+      ],
+      "e": [
+        true,
+        "aws-nodejs"
+      ],
+      "m": true,
+      "p": true,
+      "l": true,
+      "a": true,
+      "n": "serverless-nodejs-app"
+    },
+    "error": {
+      "message": "The \"create\" command was deprecated in v4. To create a new project, run the \"serverless\" command instead.",
+      "code": "UNRECOGNIZED_CLI_COMMAND"
+    },
+    "params": {},
+    "machineId": "31a009044532089ccc785a2e4d754693",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "d47c5c6d-a28a-46b6-bdd8-4c1975426f33",
+    "orgName": "sajiat",
+    "userId": "pQBfDfvmSK4Sv875CF",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "sajiat",
+    "subscription": null,
+    "userEmail": "sajiats4@gmail.com",
+    "serviceProviderAwsRegion": "ap-south-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "296062579831",
+    "projectType": "traditional",
+    "versionSf": "4.4.19",
+    "serviceProviderAwsCfStackName": "React-Frontend-App-dev",
+    "serviceUniqueId": null,
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:ap-south-1:296062579831:stack/CodePipelineStarterTemplate-DeployToECSFargate-b91vtfMl/8e727650-cc2f-11ef-afb0-0687a7357727",
+    "serviceProviderAwsCfStackCreated": "2025-01-06T13:10:09.785Z",
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": "CREATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}
